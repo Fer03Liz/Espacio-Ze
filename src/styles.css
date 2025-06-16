@@ -1,1 +1,332 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --verde-menta: #A5D6A7;
+  --verde-medio: #4CAF50;
+  --verde-oscuro: #254222;
+  --verde-suave: #E6F0DC;
+  --beige: #ECE2B1;
+  --blanco: #FFFFFF;
+  --verde-acento: #81C784;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(180deg, var(--verde-suave) 0%, var(--beige) 100%);
+  color: var(--verde-oscuro);
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Header con fondo más colorido y borde */
+.header {
+  background: linear-gradient(90deg, var(--verde-menta) 60%, var(--beige) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px rgba(165,214,167,0.08);
+  border-bottom: 2px solid var(--verde-acento);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logos enmarcados y alineados */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.logo-bg {
+  background: var(--blanco);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.09);
+  padding: 0.3rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  min-height: 64px;
+}
+
+/* Logos del mismo tamaño visual */
+/* Logos más grandes */
+.logo {
+  filter: drop-shadow(0 1px 4px rgba(60,80,40,0.06));
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  max-width: 100px;
+}
+
+/* Menú de navegación */
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav a {
+  color: var(--verde-oscuro);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s, border-bottom 0.2s;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.header nav a:hover {
+  color: var(--verde-medio);
+  border-bottom: 2px solid var(--verde-medio);
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .logo-container {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .header nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--verde-menta) 70%, var(--verde-suave) 100%);
+  color: var(--verde-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: 3rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* h1 más grande */
+.hero h1 {
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--verde-medio);
+}
+
+.hero .eslogan {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--verde-oscuro);
+}
+
+.section {
+  background: var(--blanco);
+  padding: 3rem 1rem;
+  margin: 0 auto;
+  color: var(--verde-oscuro);
+}
+
+.section.alt {
+  background: var(--verde-suave);
+}
+
+.section-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* h2 más grande */
+.section h2 {
+  color: var(--verde-medio);
+  font-size: 4.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* h3 más grande */
+.section h3 {
+  color: var(--verde-acento);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.section-img {
+  margin-top: 2rem;
+  width: 80%;
+  max-width: 420px;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(76,175,80,0.06);
+}
+
+.eventos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.evento {
+  background: var(--verde-menta);
+  color: var(--verde-oscuro);
+  border-radius: 1rem;
+  padding: 1.2rem 2rem;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.evento h3 {
+  margin: 0.8rem 0 0.5rem 0;
+  color: var(--verde-oscuro);
+}
+
+.evento-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 6px rgba(76,175,80,0.13);
+}
+
+.section ul {
+  text-align: left;
+  margin: 1.5rem auto 0 auto;
+  padding-left: 1.2rem;
+  color: var(--verde-oscuro);
+  font-size: 1.1rem;
+}
+
+.section ul li {
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.8em;
+  color: var(--verde-medio);
+  font-weight: 500;
+}
+
+.section ul li span {
+  position: absolute;
+  left: 0;
+}
+
+.equipo-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem auto 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.perfil-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--verde-menta);
+  box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px;
+  margin: 2rem auto 0 auto;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--verde-menta);
+  font-size: 1rem;
+  background: var(--blanco);
+  color: var(--verde-oscuro);
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--verde-medio);
+}
+
+button {
+  background: var(--verde-medio);
+  color: var(--blanco);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--verde-oscuro);
+}
+
+footer {
+  background: var(--verde-medio);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .hero-content {
+    max-width: 100%;
+  }
+  .section-content {
+    max-width: 100%;
+  }
+  .equipo-info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .eventos-lista {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
